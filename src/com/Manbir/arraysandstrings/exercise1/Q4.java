@@ -5,7 +5,7 @@ public class Q4 {
 
     public static void main(String args[]) {
 
-        String[] strArr = null;                         // new String[] {"cop", "thief"};
+        String[] strArr = new String[]{"cop", "thief"};                          //
         functionQ4(strArr);
     }
 
@@ -17,9 +17,7 @@ public class Q4 {
         for (String e : strArr) {
             if (e.equals("cop")) {
                 System.out.print("police \n");
-            }
-
-            if (e.equals("thief")) {
+            } else {
                 System.out.println("robber");
             }
         }
