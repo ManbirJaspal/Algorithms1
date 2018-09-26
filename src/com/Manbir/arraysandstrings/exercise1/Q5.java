@@ -12,9 +12,11 @@ public class Q5 {
     }
 
     public static void moveZerosToEnd(int[] arr1) {
-        if ((arr1 == null) || (arr1.length == 0)) {
+        if (arr1 == null || arr1.length == 0) {
             System.out.println("empty array");
+            return;
         }
+
         int[] arr2 = new int[arr1.length];
         int j = 0;
         for (int i = 0; i < arr1.length; i++) {
@@ -29,6 +31,9 @@ public class Q5 {
             j++;
         }
         System.out.println(Arrays.toString(arr2));
+
     }
 
-}
+    }
+
+

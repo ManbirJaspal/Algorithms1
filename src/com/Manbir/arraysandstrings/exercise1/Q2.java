@@ -6,19 +6,22 @@ package com.Manbir.arraysandstrings.exercise1;
 public class Q2 {
 
     public static void main(String args[]) {
-        int[] arr = new int[]{1, 2, -3, 5, 7, -32, 5, -7, 7};
+        int[] arr = new int[]{1, 2, 4, 4, 5, 6, -7, -8, 33, -4, 5, 4, -45};
         arrayNeg(arr);
 
     }
 
     public static void arrayNeg(int[] arr) {
-        if (arr != null && arr.length != 0) {
+        if (arr == null || arr.length == 0) {
+            System.out.println("empty array");
+            return;
 
-            for (int e : arr) {
-                if (e < 0) {
-                    System.out.println(e);
-                }
+
+        }
+        for (int e : arr) {
+            if (e < 0) {
+                System.out.println("hello:  " + e);
             }
-        } else System.out.println("empty array");
+        }
     }
 }

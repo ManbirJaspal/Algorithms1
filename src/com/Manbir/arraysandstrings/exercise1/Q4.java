@@ -5,15 +5,15 @@ public class Q4 {
 
     public static void main(String args[]) {
 
-        String[] strArr = new String[]{"cop", "thief"};
+        String[] strArr = null;                         // new String[] {"cop", "thief"};
         functionQ4(strArr);
     }
 
     private static void functionQ4(String[] strArr) {
-        if ((strArr == null) || (strArr.length == 0)) {
+        if (strArr == null || strArr.length == 0) {
             System.out.println("empty array");
+            return;
         }
-
         for (String e : strArr) {
             if (e.equals("cop")) {
                 System.out.print("police \n");
@@ -23,5 +23,6 @@ public class Q4 {
                 System.out.println("robber");
             }
         }
+
     }
 }

@@ -11,10 +11,11 @@ public class Q3 {
     }
 
     public static void replaceWith9(char[] arr) {
-        if ((arr == null) || (arr.length == 0)) {
+        if (arr == null || arr.length == 0) {
             System.out.println("empty array");
-        }
+            return;
 
+        }
         for (int i = 0; i < arr.length; i++) {
             if (Character.toLowerCase(arr[i]) == 'b') {
                 arr[i] = '9';
@@ -23,4 +24,5 @@ public class Q3 {
 
         System.out.println("the array after replacing is: " + Arrays.toString(arr));
     }
-}
+
+    }

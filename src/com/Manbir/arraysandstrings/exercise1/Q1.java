@@ -6,6 +6,8 @@ public class Q1 {
     public static void main(String[] args) {
 
         int[] arr = new int[]{1, 2, 3, 5, 7, 32, 5, 7, 7};
+
+
         System.out.println("The total after the sum is: " + arraySum(arr));
 
     }
@@ -16,8 +18,8 @@ public class Q1 {
             for (int e : arr) {
                 sum = sum + e;
             }
+            return sum;
+        } else return 0;
 
-        }
-        return sum;
     }
 }
