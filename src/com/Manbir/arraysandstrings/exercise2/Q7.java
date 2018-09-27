@@ -1,31 +1,29 @@
 package com.Manbir.arraysandstrings.exercise2;
 
+import java.util.HashMap;
+
 public class Q7 {
 //    Given a string, count how many times each character shows up in the string.
 
     public static void main(String[] args) {
-        String str = "sajdbhdgyewdweidgwiyufgiubfjwebfhwevfywfg2whdouiwehfwebfhjwevfhyg";
-        char temp;
-        int count = 0;
+        String string = "dhjwbcnwncwioendoiu2ebndjwebdowuedhwieodnqwedjqwebdiuydhweiodnqwejkd";
+        countCharacters(string);
+    }
 
-        if (str != null && !str.isEmpty()) {
+    public static void countCharacters(String string) {
+        HashMap<Character, Integer> chMap = new HashMap<Character, Integer>();
+        char[] ch = string.toCharArray();
 
-            for (int i = 0; i < str.length(); i++) {
-                temp = str.charAt(i);
-
-                for (int j = 0; j < str.length(); j++) {
-                    if (temp == str.charAt(j)) {
-                        count++;
-                    }
-                }
-                System.out.println("The character " + temp + " is repeated " + (count - 1) + " times");
-                count = 0;
-
+        for (Character chars : ch) {
+            if (chMap.containsKey(chars)) {
+                chMap.put(chars, chMap.get(chars + 1));
+            } else {
+                chMap.put(chars, 1);
             }
-        } else {
-            System.out.println("String is empty");
         }
 
     }
-
 }
+
+
+

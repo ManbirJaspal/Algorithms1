@@ -6,7 +6,7 @@ package com.Manbir.arraysandstrings.exercise1;
 public class Q2 {
 
     public static void main(String args[]) {
-        int[] arr = new int[]{1, 2, 4, 4, 5, 6, -7, -8, 33, -4, 5, 4, -45};
+        int[] arr = null;
         arrayNeg(arr);
 
     }
@@ -15,7 +15,6 @@ public class Q2 {
         if (arr == null || arr.length == 0) {
             System.out.println("empty array");
             return;
-
 
         }
         for (int e : arr) {
